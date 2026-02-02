@@ -4,7 +4,6 @@ An opinionated skill for building production-ready Model Context Protocol (MCP) 
 
 ## What This Skill Provides
 
-### Core Skill (`SKILL.md`)
 - Complete guide for building new MCP servers
 - Step-by-step instructions for adding tools to existing servers
 - Project structure and organization patterns
@@ -27,6 +26,27 @@ The skill is automatically available when building MCP servers. It activates whe
 - **Metrics**: `github.com/prometheus/client_golang/prometheus`
 - **HTTP Client**: Standard library with connection pooling
 - **Testing**: Standard library with table-driven tests
+
+## Installation
+
+### Option 1: Global Installation (Recommended)
+
+Install the skill globally to use it across all your Cursor workspaces:
+
+```bash
+git clone https://github.com/codeready-toolchain/go-mcp-builder \
+    ~/.cursor/skills/go-mcp-builder
+```
+
+### Option 2: Workspace-Local Installation
+
+Install the skill in a specific workspace:
+
+```bash
+cd your-mcp-project/
+git clone https://github.com/codeready-toolchain/go-mcp-builder \
+    .cursor/skills/go-mcp-builder
+```
 
 ## TODO
 - [] expand the skill to support adding new tools in existing servers, or refactoring existing servers.
