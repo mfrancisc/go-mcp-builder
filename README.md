@@ -5,7 +5,6 @@ An opinionated skill for building production-ready Model Context Protocol (MCP) 
 ## What This Skill Provides
 
 - Complete guide for building new MCP servers
-- Step-by-step instructions for adding tools to existing servers
 - Project structure and organization patterns
 - Tool design best practices
 - Observability patterns (logging, metrics, middleware)
@@ -34,7 +33,7 @@ The skill is automatically available when building MCP servers. It activates whe
 Install the skill globally to use it across all your Cursor workspaces:
 
 ```bash
-git clone https://github.com/codeready-toolchain/go-mcp-builder \
+git clone https://github.com/mfrancisc/go-mcp-builder \
     ~/.cursor/skills/go-mcp-builder
 ```
 
@@ -44,11 +43,22 @@ Install the skill in a specific workspace:
 
 ```bash
 cd your-mcp-project/
-git clone https://github.com/codeready-toolchain/go-mcp-builder \
+git clone https://github.com/mfrancisc/go-mcp-builder \
     .cursor/skills/go-mcp-builder
 ```
 
-## TODO
-- [] expand the skill to support adding new tools in existing servers, or refactoring existing servers.
-- [] add `/references` with best practices, examples, more testing patterns ( unit/integration testing )
-- [] add `/scripts` for project initialization, adding tool to an existing server, creating containerfiles, generating golangci config file
+## Roadmap
+
+### Coming Soon
+
+- [ ] **Tool Management** - Support for adding new tools to existing servers and refactoring existing servers
+- [ ] **Reference Documentation** - Comprehensive guides in `/references`:
+  - [ ] Best practices for production MCP servers
+  - [ ] Complete working examples
+  - [ ] Testing patterns (unit, integration, benchmarks)
+  - [ ] Quick reference guide
+- [ ] **Automation Scripts** - Helper scripts in `/scripts`:
+  - [ ] Project initialization (`init-project.sh`)
+  - [ ] Tool generation (`add-tool-to-server.sh`)
+  - [ ] Containerfile generation
+  - [ ] Complete GH action configuration generation

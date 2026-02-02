@@ -95,7 +95,7 @@ Implement in `internal/server/server.go`:
 Each tool in `internal/tools/` should:
 - Have a clear, action-oriented name with service prefix
 - Use struct-based input parameters with validation
-- Return properly formatted responses (support JSON and Markdown)
+- Return properly formatted responses (support JSON or Markdown)
 - Handle errors gracefully with helpful messages
 - Include comprehensive godoc comments
 
@@ -198,7 +198,7 @@ var SearchOutputSchema = &jsonschema.Schema{
     },
 }
 
-// 4. Use `ToolHandlerFor[Input, Output]`, and always return `nil` for `CallToolResult` and let the SDK handle serialization:
+// 4. Use `ToolHandlerFor[Input, Output]`, and always return `nil` for `CallToolResult` and let the SDK handle serialization.
 // SDK automatically:
 // - serializes output to JSON
 // - adds to CallToolResult.Content
